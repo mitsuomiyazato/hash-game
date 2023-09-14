@@ -23,7 +23,7 @@ html {
     height: 100%;
   
     display: grid;
-    grid-template-rows: 1fr 7fr;
+    grid-template-rows: 1fr 6fr;
     font-family: 'Pacifico', cursive;
 }
   
@@ -38,12 +38,16 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#header-game h1
-{
+
     color: var(--main-font-color);
-    font-size: 4rem;
+    font-size: 1.5rem;
     font-family: 'Pacifico', cursive;
+    
+}
+
+#header-game iconify-icon
+{
+    font-size: 50px;
 }
 
 #principal-screen
@@ -56,27 +60,27 @@ html {
     justify-content: center;
 }
 
-#information-container
+#information-home-container
 {
     display: flex;
     flex-direction: column;
     color: var(--main-font-color);
 }
 
-#title-information
+#title-home-information
 {
-    font-size: 50px;
+    font-size: 30px;
 }
 
-#player-container
+#player-home-container
 {
     display: flex;
     flex-direction: column;
     
-    font-size: 40px;
+    font-size: 30px;
 }
 
-#player-container input
+#player-home-container input
 {
     background-color: var(--main-background-color);
     
@@ -107,4 +111,108 @@ html {
 {
     transform: translateY(5px);
     font-size: 40px;
+}
+
+#principal-game-screen
+{
+    background-image: url("backscreen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+
+   
+}
+
+
+#players-game-container
+{
+    width: 25%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    
+    color: var(--main-font-color);
+
+    background-color: rgba(246, 224, 54, 0.897);
+    
+    font-size: 2rem;
+    text-align: center;
+}
+
+#players-game-container h2
+{
+    
+    margin: 0;
+}
+
+#game-screen
+{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-board
+{
+    border: solid 4px black;
+    width: 450px;
+    height: 450px;
+}
+
+#game-board .row
+{
+    height: 33.33%;
+    width: 100%;
+
+    display: flex;
+
+    border-bottom: 1px solid black;
+}
+#game-board .colum
+{
+    height: 100%;
+    width: 100%;
+
+    border-right: 1px solid black;
+}
+
+
+
+@media (min-width: 1600px)
+{
+    .player
+    {
+        font-size: 50px;
+    }
+    #players-game-container
+    {
+        font-size: 55px;
+    }
+
+    #players-game-container
+    {
+        height: 45%;
+    }
+}
+
+@media (min-width: 1800px)
+{
+    #game-board
+    {
+        width: 700px;
+        height: 700px;
+    }
+}
+
+@media (min-width: 2100px)
+{
+    #game-board
+    {
+        width: 900px;
+        height: 900px;
+    }
 }

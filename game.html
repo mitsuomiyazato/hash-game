@@ -5,23 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <title>Hash Game</title>
 </head>
 <body>
     <main id="main-container">
 
         <header id="header-game">
-            
             <h1>Hash Game</h1>
-
+            <iconify-icon icon="line-md:hash"></iconify-icon>
         </header>
-        <div id="principal-screen">
-            <div id="p1">player1</div>
-            <div id="p2">player2</div>
+        <div id="principal-game-screen">
+            <div id="players-game-container">
+                    <h2>Note</h2>
+                    <div class="player">
+                        Player 1
+                        <iconify-icon icon="line-md:twitter-x"></iconify-icon>
+                    </div>
+                    <div class="player">
+                        Player 2
+                        <iconify-icon icon="line-md:circle"></iconify-icon>
+                    </div>
+            </div>
+        
+            <div id="game-screen">
+                <div id="game-board">
+                    <div class="row">
+                        <div class="colum"></div>
+                        <div class="colum"></div>
+                        <div class="colum"></div>
+                    </div>
+                    <div class="row">
+                        <div class="colum"></div>
+                        <div class="colum"></div>
+                        <div class="colum"></div>
+                    </div>
+                    <div class="row">
+                        <div class="colum"></div>
+                        <div class="colum"></div>
+                        <div class="colum"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
