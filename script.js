@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function() {
+    loadPage();
+    startGame();
+});
+
 var isGameActive = true;
 
 function storeInformation(event)
@@ -79,7 +84,7 @@ function startGame() {
                     reloadButton.hidden = false;
                 }
             }
-            
+
             currentPlayer = togglePlayer(currentPlayer);
         }
     }
