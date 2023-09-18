@@ -90,7 +90,7 @@ html {
     font-size: 30px;   
 }
 
-#start-button
+.myButton
 {
     margin: 30px;
     width: 30%;
@@ -107,26 +107,16 @@ html {
     font-size: 30px;
 }
 
-#start-button:hover
+.myButton:hover
 {
     transform: translateY(5px);
     font-size: 40px;
 }
 
-#principal-game-screen
-{
-    background-image: url("backscreen.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-}
-
-
 #players-game-container
 {
     width: 25%;
-    height: 50%;
+    height: 80%;
 
     display: flex;
     flex-direction: column;
@@ -143,11 +133,13 @@ html {
 {
     margin: 0;
 }
+
 #players-game-container .player
 {
     display: flex;
     justify-content: space-evenly;
 }
+
 #players-game-container iconify-icon
 {
     margin-top: 20px;
@@ -178,15 +170,22 @@ html {
 
     border-bottom: 1px solid black;
 }
+
 #game-board .column
 {
     height: 100%;
     width: 100%;
 
     border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
+#game-board .column iconify-icon
+{
+    font-size: 100px;
+}
 
 @media (min-width: 1600px)
 {
@@ -199,10 +198,6 @@ html {
         font-size: 55px;
     }
 
-    #players-game-container
-    {
-        height: 50%;
-    }
 }
 
 @media (min-width: 1800px)

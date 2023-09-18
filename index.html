@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <title>Hash Game</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <main id="main-container">
@@ -17,16 +18,14 @@
         </header>
 
         <div id="principal-screen">
-
-            <form id="information-home-container">
+            <form id="information-home-container" onsubmit="storeInformation(event)">
                 <h2 id="title-home-information">Digite o nome dos jogadores</h2>
                 <div id="player-home-container">
-                    Player 1:<input type="text" name="input-player" required>
-                    Player 2:<input type="text" name="input-player" required>
+                    Player 1:<input type="text" name="input-player" id="inputp1" required>
+                    Player 2:<input type="text" name="input-player" id="inputp2" required>
                 </div>
-                <input type="submit" id="start-button" value="Jogar"></input>
+                <input type="submit" class="myButton" id="start-button" value="Jogar"></input>
             </form>
-
         </div>
     </main>
 </body>
