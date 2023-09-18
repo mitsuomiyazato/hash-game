@@ -105,6 +105,8 @@ html {
     border-radius: 10px;
 
     font-size: 30px;
+
+    cursor: pointer;
 }
 
 .myButton:hover

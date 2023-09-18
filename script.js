@@ -43,54 +43,44 @@ function startGame() {
 
     const gameBoard = document.getElementById("game-board");
 
-    if (!isGameActive) {
-        return;
-    }
-
     function addClicker(event) {
         if (!isGameActive) {
             return;
         }
 
-        if (event.target.childElementCount === 0) {
+        if (event.target.textContent.trim() === "") {
+
+            event.target.removeEventListener("click", addClicker);
+            event.target.style = "cursor: default;"
+
             playerTurn(currentPlayer, event.target);
+            
             if (currentPlayer == "player1") {
                 result.textContent = "Vez de " + player2;
             } else {
                 result.textContent = "Vez de " + player1;
             }
 
-            event.target.removeEventListener("click", addClicker);
-            event.target.style = "cursor: default;"
-
             finalize = analiseGame(columns);
+
             if (finalize != 0) {
                 isGameActive = false;
                 if (currentPlayer === "player1") {
                     result.textContent = player1 + " é o(a) vencedor(a)";
-                    reloadButton.hidden = false;
                 } else {
                     result.textContent = player2 + " é o(a) vencedor(a)";
-                    reloadButton.hidden = false;
                 }
-                removeClickListeners();
+                reloadButton.hidden = false;
             } else {
                 velha++;
                 if (velha == 9) {
                     isGameActive = false;
                     result.textContent = "Empate! Deu velha!";
                     reloadButton.hidden = false;
-                    removeClickListeners();
                 }
             }
-
+            
             currentPlayer = togglePlayer(currentPlayer);
-        }
-    }
-
-    function removeClickListeners() {
-        for (var i = 0; i < 9; i++) {
-            columns[i].removeEventListener("click", addClicker);
         }
     }
 
