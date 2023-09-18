@@ -61,6 +61,7 @@ function startGame() {
             }
 
             event.target.removeEventListener("click", addClicker);
+            event.target.style = "cursor: default;"
 
             finalize = analiseGame(columns);
             if (finalize != 0) {
