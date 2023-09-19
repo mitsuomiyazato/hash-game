@@ -90,11 +90,34 @@ html {
     font-size: 30px;   
 }
 
+#exit-button
+{
+    position: fixed;
+    
+    top: 50px;
+    left: 40px;
+
+    background-color: white;    
+    
+    color: red;
+    font-size: 30px;
+    text-align: center;
+
+    border: solid 1px black;
+    border-radius: 50px;
+
+    cursor: pointer;
+
+}
+
+#exit-button:hover
+{
+    font-size: 40px;
+}
+
 .myButton
 {
     margin: 30px;
-    width: 30%;
-    height: 100px;
 
     align-self: center;
 
