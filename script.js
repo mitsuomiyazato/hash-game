@@ -31,6 +31,11 @@ function loadPage()
 
 function reloadPage()
 {
+    window.location.reload();
+}
+
+function exit()
+{
     window.location.href = "index.html";
 }
 
@@ -71,9 +76,9 @@ function startGame() {
             if (finalize != 0) {
                 isGameActive = false;
                 if (currentPlayer === "player1") {
-                    result.textContent = player1 + " é o(a) vencedor(a)";
+                    result.textContent = player1 + " venceu";
                 } else {
-                    result.textContent = player2 + " é o(a) vencedor(a)";
+                    result.textContent = player2 + " venceu";
                 }
                 reloadButton.hidden = false;
             } else {
