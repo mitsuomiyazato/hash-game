@@ -51,8 +51,6 @@ function startGame() {
     const player1 = document.getElementById("nickp1").textContent;
     const player2 = document.getElementById("nickp2").textContent;
 
-    const gameBoard = document.getElementById("game-board");
-
     function addClicker(event) {
         if (!isGameActive) {
             return;
@@ -94,7 +92,11 @@ function startGame() {
         }
     }
 
-    gameBoard.addEventListener("click", addClicker);
+    for(var i = 0; i < columns.length; i++)
+    {
+        columns[i].addEventListener("click", addClicker);
+    }
+    
 }
 
 function playerTurn(player, space)
