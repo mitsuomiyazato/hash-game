@@ -1,8 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    loadPage();
-    startGame();
-});
-
 var isGameActive = true;
 
 function storeInformation(event)
